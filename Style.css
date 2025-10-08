@@ -1,0 +1,41 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  line-height: 1.6;
+}
+
+header {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background: #444;
+}
+
+nav a {
+  color: white;
+  padding: 1rem;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background: #666;
+}
+
+section {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.project {
+  background: #f4f4f4;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
