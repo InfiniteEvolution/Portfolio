@@ -270,6 +270,59 @@ nav li a:hover {
 
 
 /* ---------------------------------------------------
+   Current Interests – glassmorphic cards with icons
+   --------------------------------------------------- */
+.interests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.interest-card {
+  background: var(--color-card-bg);
+  border-radius: var(--radius);
+  padding: 2rem 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(var(--blur-card));
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.interest-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 12px 32px rgba(0, 0, 0, 0.15),
+    0 0 0 1px rgba(10, 132, 255, 0.1);
+}
+
+.interest-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 2px 8px rgba(10, 132, 255, 0.3));
+  transition: var(--transition);
+}
+
+.interest-card:hover .interest-icon {
+  transform: scale(1.1);
+  filter: drop-shadow(0 4px 12px rgba(10, 132, 255, 0.5));
+}
+
+.interest-card h3 {
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+  font-size: 1.3rem;
+}
+
+.interest-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin-bottom: 0;
+}
+
+/* ---------------------------------------------------
    Certifications – simple list with icons
    --------------------------------------------------- */
 #certifications ul {
