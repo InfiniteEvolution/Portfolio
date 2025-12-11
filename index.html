@@ -1,73 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Name | Portfolio</title>
+  <title>Sijo | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
 </head>
+
 <body>
-  <!-- ===== Header ===== -->
+  <!-- Header / Hero -->
   <header id="home">
     <div class="hero">
-      <h1>Hello, I'm <span>Your Name</span></h1>
-      <p>iOS Developer | Lab Automation | Storyteller</p>
+      <div class="avatar"></div>
+      <h1>Sijo</h1>
+      <p class="subtitle">Associate Technical Lead | iOS Development</p>
       <a href="#projects" class="btn">View My Work</a>
     </div>
   </header>
 
-  <!-- ===== Navigation ===== -->
+  <!-- Navigation -->
   <nav>
     <ul>
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
-  <!-- ===== About ===== -->
+  <!-- About -->
   <section id="about">
     <h2>About Me</h2>
-    <p>
-      I'm a developer with experience in BLE, app stability optimization, 
-      and creative storytelling. My work spans from technical iOS modules 
-      to literary and cinematic projects.
-    </p>
+    <p>Senior iOS Engineer with over 9 years of extensive experience in architecting, developing, and leading the
+      creation of scalable, high‑performance native applications and in‑house frameworks using Swift and Objective‑C.
+      Proven ability to drive innovation, mentor teams, and deliver robust mobile solutions that significantly enhance
+      user experience and data security.</p>
   </section>
 
-  <!-- ===== Projects ===== -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project-grid">
-      <div class="project-card">
-        <h3>Hierarchy Chart App</h3>
-        <p>An interactive flow chart app to analyze employee revenue and expenses.</p>
-        <a href="https://github.com/username/hierarchy-chart" target="_blank">View on GitHub</a>
+  <!-- Experience -->
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="timeline">
+      <div class="job">
+        <h3>Associate Technical Lead, MicroObjects</h3>
+        <span class="date">Nov 2020 – Present</span>
+        <ul>
+          <li>Architected MVVM‑C foundation, streamlining future feature development.</li>
+          <li>Led BLE integration for Bushnell Golf app, delivering a reliable device‑pairing system.</li>
+          <li>Engineered OTA firmware update system with a single‑queue data write mechanism.</li>
+          <li>Mentored junior developers, instituted rigorous code‑review standards.</li>
+          <li>Implemented app‑level obfuscation and OAuth 2.0 secured communication.</li>
+          <li>Migrated legacy UIKit views to SwiftUI, modernising the UI stack.</li>
+        </ul>
       </div>
-      <div class="project-card">
-        <h3>Oh Yen Kadhal (Novel)</h3>
-        <p>A mystery novel exploring memory, architecture, and love.</p>
+      <div class="job">
+        <h3>Senior Software Engineer, Hifx</h3>
+        <span class="date">Feb 2019 – Nov 2020</span>
+        <ul>
+          <li>Published a SSO & session‑management library to CocoaPods & SPM.</li>
+          <li>Built multiple iOS apps from scratch using MVVM architecture.</li>
+          <li>Designed secure authentication with SHA‑256/MD5 and automated session handling.</li>
+        </ul>
       </div>
-      <div class="project-card">
-        <h3>Lab Automation</h3>
-        <p>Automating calibration & testing workflows for better efficiency.</p>
+      <div class="job">
+        <h3>iOS Developer, Gadgeon Smart Systems</h3>
+        <span class="date">Nov 2015 – Feb 2019</span>
+        <ul>
+          <li>Migrated legacy Objective‑C codebases to Swift, boosting performance.</li>
+          <li>Integrated BLE & MQTT for real‑time alerts in the Alertpoint emergency app.</li>
+          <li>Created interactive floor‑plan UI with Core Graphics.</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- ===== Contact ===== -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>📧 you@example.com</p>
-    <p><a href="https://linkedin.com/in/username" target="_blank">LinkedIn</a></p>
-    <p><a href="https://github.com/username" target="_blank">GitHub</a></p>
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul class="skill-list">
+      <li>Swift, Objective‑C</li>
+      <li>MVVM‑C, MVC, POP</li>
+      <li>Combine, SwiftUI, UIKit, Auto Layout</li>
+      <li>Core Bluetooth, Core Location, Core Data</li>
+      <li>Firebase, MQTT, REST APIs, AWS</li>
+      <li>Git, CocoaPods, Swift Package Manager</li>
+      <li>Agile, JIRA, Test‑Driven Development (XCTest)</li>
+    </ul>
   </section>
 
-  <!-- ===== Footer ===== -->
+  <!-- Education -->
+  <section id="education">
+    <h2>Education</h2>
+    <p>B.C.A, Annamalai University (Aug 2012 – May 2015)</p>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>📞 (+91) 9544215814</p>
+    <p>📧 <a href="mailto:sijo.perumadan@gmail.com">sijo.perumadan@gmail.com</a></p>
+    <p>📍 Thrissur, Kerala, India</p>
+    <p>🔗 <a href="https://linkedin.com/in/sijopert" target="_blank">LinkedIn</a> | <a
+        href="https://github.com/sijopert" target="_blank">GitHub</a></p>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Your Name | Built with ❤️ using GitHub Pages</p>
+    <p>&copy; 2025 Sijo | Built with ❤️ using GitHub Pages</p>
   </footer>
 </body>
+
 </html>
