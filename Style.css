@@ -1,52 +1,184 @@
-/* Reset */
-* {
+/* ---------------------------------------------------
+   Apple‑Inspired Liquid Glass Design System
+   --------------------------------------------------- */
+
+/* System font – SF Pro (fallback to system UI) */
+@font-face {
+  font-family: 'SF Pro';
+  src: local('SF Pro Text'), local('Helvetica Neue'), local('Arial');
+}
+
+:root {
+  /* Apple system colors (light) */
+  --color-bg: #f2f2f7;
+  /* systemBackground */
+  --color-bg-dark: #1c1c1e;
+  /* systemBackground (dark) */
+  --color-primary: #0a84ff;
+  /* systemBlue */
+  --color-primary-dark: #0060df;
+  /* systemBlue (dark) */
+  --color-text: #1c1c1e;
+  /* label */
+  --color-text-dark: #f2f2f7;
+  /* label (dark) */
+  --color-card-bg: rgba(255, 255, 255, 0.7);
+  /* systemFill */
+  --color-card-bg-dark: rgba(28, 28, 30, 0.7);
+  --blur-card: 20px;
+  --radius: 12px;
+  --transition: 0.25s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: var(--color-bg-dark);
+    --color-text: var(--color-text-dark);
+    --color-card-bg: var(--color-card-bg-dark);
+  }
+}
+
+/* Global reset */
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html,
 body {
-  font-family: 'Segoe UI', Tahoma, sans-serif;
-  line-height: 1.6;
-  color: #333;
+  height: 100%;
+  font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
 }
 
-/* Header */
-header {
-  height: 100vh;
-  background: linear-gradient(to right, #1f1c2c, #928dab);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* Layout helpers */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+section {
+  padding: 4rem 0;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s var(--transition), transform 0.4s var(--transition);
+}
+
+section.visible {
+  opacity: 1;
+  transform: none;
+}
+
+h1,
+h2,
+h3 {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.8rem;
+}
+
+h2 {
+  font-size: 2.2rem;
   text-align: center;
-  color: white;
 }
 
-header h1 {
-  font-size: 2.5rem;
+h3 {
+  font-size: 1.6rem;
 }
 
-header span {
-  color: #ffd700;
+p {
+  margin-bottom: 1rem;
 }
 
-.btn {
+/* ---------------------------------------------------
+   Hero / Header – Liquid Glass background
+   --------------------------------------------------- */
+header#home {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #e0e0e0, #c8c8c8);
+  position: relative;
+  overflow: hidden;
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(30px);
+}
+
+header .hero {
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+header .avatar {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 1.5rem;
+  background: url('avatar_placeholder.png') center/cover no-repeat;
+  border-radius: 50%;
+  border: 4px solid var(--color-primary);
+  box-shadow: 0 0 0 8px var(--color-card-bg);
+}
+
+header .subtitle {
+  font-size: 1.2rem;
+  opacity: 0.85;
+  margin-bottom: 1.5rem;
+}
+
+/* Apple‑style button – liquid glass */
+.liquid-button {
   display: inline-block;
-  margin-top: 1rem;
-  padding: 0.7rem 1.2rem;
-  background: #ffd700;
-  color: #222;
+  padding: 0.8rem 1.6rem;
+  background: rgba(255, 255, 255, 0.25);
+  color: var(--color-primary);
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(12px);
+  font-weight: 600;
   text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
+  transition: var(--transition);
 }
 
-/* Navigation */
+.liquid-button:hover {
+  background: rgba(255, 255, 255, 0.35);
+  color: var(--color-primary-dark);
+  transform: translateY(-2px);
+}
+
+.liquid-button:active {
+  background: rgba(255, 255, 255, 0.45);
+  transform: translateY(0);
+}
+
+/* ---------------------------------------------------
+   Navigation – sticky glass bar
+   --------------------------------------------------- */
 nav {
-  background: #222;
   position: sticky;
   top: 0;
-  z-index: 100;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  z-index: 10;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
@@ -55,60 +187,97 @@ nav ul {
   list-style: none;
 }
 
-nav ul li a {
-  color: white;
-  padding: 1rem;
-  text-decoration: none;
+nav li a {
   display: block;
+  padding: 1rem 1.2rem;
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
 }
 
-nav ul li a:hover {
-  background: #444;
+nav li a:hover {
+  color: var(--color-primary);
+  background: rgba(255, 255, 255, 0.2);
 }
 
-/* Sections */
-section {
-  padding: 4rem 2rem;
-  max-width: 900px;
-  margin: auto;
-}
-
-h2 {
-  text-align: center;
-  margin-bottom: 2rem;
-  font-size: 2rem;
-  color: #1f1c2c;
-}
-
-/* Projects */
+/* ---------------------------------------------------
+   Project cards – glassmorphism
+   --------------------------------------------------- */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
 }
 
 .project-card {
-  background: #f4f4f4;
+  background: var(--color-card-bg);
+  border-radius: var(--radius);
   padding: 1.5rem;
-  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(var(--blur-card));
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: var(--transition);
   text-align: center;
-  transition: transform 0.2s;
 }
 
 .project-card:hover {
-  transform: scale(1.05);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
 .project-card a {
-  color: #1f1c2c;
-  font-weight: bold;
+  color: var(--color-primary);
+  font-weight: 600;
   text-decoration: none;
 }
 
-/* Footer */
+/* ---------------------------------------------------
+   Certifications – simple list with icons
+   --------------------------------------------------- */
+#certifications ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#certifications li::before {
+  content: "✔️";
+  margin-right: 0.5rem;
+}
+
+/* ---------------------------------------------------
+   Footer – dark translucent bar
+   --------------------------------------------------- */
 footer {
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
   text-align: center;
-  padding: 1rem;
-  background: #222;
-  color: white;
+  padding: 1.5rem 0;
+  font-size: 0.9rem;
+}
+
+/* ---------------------------------------------------
+   Responsive tweaks
+   --------------------------------------------------- */
+@media (max-width: 768px) {
+  header .avatar {
+    width: 110px;
+    height: 110px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav li a {
+    padding: 0.8rem;
+  }
 }
