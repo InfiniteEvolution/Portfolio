@@ -1,13 +1,20 @@
 {
   "hosting": {
-    "source": "Y",
+    "public": ".",
     "ignore": [
       "firebase.json",
       "**/.*",
-      "**/node_modules/**"
+      "**/node_modules/**",
+      "Y/**",
+      ".github/**",
+      "DEPLOY.md",
+      "DEPLOYMENT_GUIDE.md"
     ],
-    "frameworksBackend": {
-      "region": "us-central1"
-    }
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
   }
 }
