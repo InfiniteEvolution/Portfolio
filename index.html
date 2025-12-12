@@ -4,171 +4,259 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sijo | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>Sijo | iOS Developer Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
 </head>
 
 <body>
-  <!-- Header / Hero -->
-  <header id="home">
-    <div class="hero">
-      <div class="avatar"></div>
-      <h1>Sijo</h1>
-      <p class="subtitle">Associate Technical Lead | iOS Development</p>
-      <a href="#projects" class="liquid-button">View My Work</a>
-    </div>
-  </header>
+  <div class="background-gradient"></div>
 
-  <!-- Navigation -->
-  <nav>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- About -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Senior iOS Engineer with over 9 years of extensive experience in architecting, developing, and leading the
-      creation of scalable, high‑performance native applications and in‑house frameworks using Swift and Objective‑C.
-      Proven ability to drive innovation, mentor teams, and deliver robust mobile solutions that significantly enhance
-      user experience and data security.</p>
-  </section>
-
-  <!-- Experience -->
-  <section id="experience">
-    <h2>Experience</h2>
-    <div class="timeline">
-      <div class="job">
-        <h3>Associate Technical Lead, MicroObjects</h3>
-        <span class="date">Nov 2020 – Present</span>
-        <ul>
-          <li>Architected MVVM‑C foundation, streamlining future feature development.</li>
-          <li>Led BLE integration for Bushnell Golf app, delivering a reliable device‑pairing system.</li>
-          <li>Engineered OTA firmware update system with a single‑queue data write mechanism.</li>
-          <li>Mentored junior developers, instituted rigorous code‑review standards.</li>
-          <li>Implemented app‑level obfuscation and OAuth 2.0 secured communication.</li>
-          <li>Migrated legacy UIKit views to SwiftUI, modernising the UI stack.</li>
-        </ul>
+  <main class="bento-grid">
+    <!-- Profile / Hero Card -->
+    <section class="card hero-card" id="home">
+      <div class="avatar-container">
+        <div class="avatar"></div>
+        <div class="status-indicator"></div>
       </div>
-      <div class="job">
-        <h3>Senior Software Engineer, Hifx</h3>
-        <span class="date">Feb 2019 – Nov 2020</span>
-        <ul>
-          <li>Published a SSO & session‑management library to CocoaPods & SPM.</li>
-          <li>Built multiple iOS apps from scratch using MVVM architecture.</li>
-          <li>Designed secure authentication with SHA‑256/MD5 and automated session handling.</li>
-        </ul>
+      <div class="hero-content">
+        <h1>Sijo</h1>
+        <p class="role">Associate Technical Lead</p>
+        <p class="specialization">iOS Development Expert</p>
+        <div class="social-links">
+          <a href="https://github.com/InfiniteEvolution" target="_blank" class="social-btn github">
+            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+              </path>
+            </svg>
+            GitHub
+          </a>
+          <a href="https://linkedin.com/in/sijopert" target="_blank" class="social-btn linkedin">
+            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+            LinkedIn
+          </a>
+        </div>
+        <a href="mailto:sijo.perumadan@gmail.com" class="cta-button">
+          <span>Let's Talk</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
       </div>
-      <div class="job">
-        <h3>iOS Developer, Gadgeon Smart Systems</h3>
-        <span class="date">Nov 2015 – Feb 2019</span>
-        <ul>
-          <li>Migrated legacy Objective‑C codebases to Swift, boosting performance.</li>
-          <li>Integrated BLE & MQTT for real‑time alerts in the Alertpoint emergency app.</li>
-          <li>Created interactive floor‑plan UI with Core Graphics.</li>
-        </ul>
+    </section>
+
+    <!-- About Card -->
+    <section class="card about-card" id="about">
+      <div class="card-header">
+        <h2>About</h2>
+        <span class="icon">👋</span>
       </div>
-    </div>
-  </section>
+      <p>Senior iOS Engineer with <strong>9+ years</strong> of experience. Specialized in architecting scalable native
+        apps, creating in-house frameworks, and leading high-performance teams. expert in <strong>Swift, SwiftUI, and
+          Objective-C</strong>.</p>
 
-  <!-- Projects -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project-grid">
-      <div class="project-card">
-        <img src="images/canvas.png" alt="Canvas - Privacy-First AI Companion" />
-        <h3>Canvas - Privacy-First AI Companion</h3>
-        <p>An on-device AI companion that quantifies your "Vibe" using CoreML, CoreMotion, and CoreLocation. Features
-          neuromorphic learning, bare-metal performance, and zero data leaks—all running locally on iOS.</p>
-        <a href="https://github.com/InfiniteEvolution/Canvas" target="_blank">View on GitHub</a>
+      <div class="stats-row">
+        <div class="stat">
+          <span class="number">9+</span>
+          <span class="label">Years Exp.</span>
+        </div>
+        <div class="stat">
+          <span class="number">20+</span>
+          <span class="label">Apps Shipped</span>
+        </div>
+        <div class="stat">
+          <span class="number">5+</span>
+          <span class="label">Team Size</span>
+        </div>
       </div>
-      <div class="project-card">
-        <img src="images/swiftnetwork.png" alt="SwiftNetwork - Modern Networking Library" />
-        <h3>SwiftNetwork - Modern Networking Library</h3>
-        <p>Protocol-oriented networking library for Swift with async/await, Combine publishers, and completion handlers.
-          Features type-safe endpoints, configurable retry mechanism, and full Sendable conformance.</p>
-        <a href="https://github.com/InfiniteEvolution/SwiftNetwork" target="_blank">View on GitHub</a>
+      <div class="location">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+          <circle cx="12" cy="10" r="3"></circle>
+        </svg>
+        Thrissur, Kerala, India
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Current Interests -->
-  <section id="interests">
-    <h2>Current Interests</h2>
-    <div class="interests-grid">
-      <div class="interest-card">
-        <div class="interest-icon">🧠</div>
-        <h3>On-Device AI/ML</h3>
-        <p>Building privacy-first machine learning systems using CoreML with neuromorphic architectures that learn
-          continuously on-device without cloud dependencies.</p>
+    <!-- Experience Card -->
+    <section class="card experience-card" id="experience">
+      <div class="card-header">
+        <h2>Experience</h2>
+        <span class="icon">🚀</span>
       </div>
-      <div class="interest-card">
-        <div class="interest-icon">🔒</div>
-        <h3>Privacy-First Computing</h3>
-        <p>Architecting systems where user data never leaves the device. Exploring bare-metal performance optimization
-          and local-first AI companions.</p>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot current"></div>
+          <div class="timeline-content">
+            <h4>Associate Technical Lead</h4>
+            <span class="company">MicroObjects</span>
+            <span class="date">2020 - Present</span>
+            <p>Architected MVVM-C foundation, Led BLE integration for Bushnell Golf, Mentored team.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h4>Senior Software Engineer</h4>
+            <span class="company">Hifx</span>
+            <span class="date">2019 - 2020</span>
+            <p>Published SSO library, Secured authentication systems.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h4>iOS Developer</h4>
+            <span class="company">Gadgeon</span>
+            <span class="date">2015 - 2019</span>
+            <p>IoT Apps, BLE & MQTT, Core Graphics.</p>
+          </div>
+        </div>
       </div>
-      <div class="interest-card">
-        <div class="interest-icon">⚡</div>
-        <h3>Protocol-Oriented Design</h3>
-        <p>Crafting type-safe, testable Swift architectures with modern concurrency patterns (async/await, actors) and
-          strict Sendable conformance.</p>
+    </section>
+
+    <!-- Tech Stack Card -->
+    <section class="card skills-card" id="skills">
+      <div class="card-header">
+        <h2>Tech Stack</h2>
+        <span class="icon">⚡</span>
       </div>
-    </div>
-  </section>
+      <div class="tech-tags">
+        <span class="tag swift">Swift</span>
+        <span class="tag swiftui">SwiftUI</span>
+        <span class="tag uikit">UIKit</span>
+        <span class="tag combine">Combine</span>
+        <span class="tag objective-c">Objective-C</span>
+        <span class="tag coreml">CoreML</span>
+        <span class="tag ble">BLE</span>
+        <span class="tag mvvm">MVVM-C</span>
+        <span class="tag spm">SPM</span>
+        <span class="tag ci">CI/CD</span>
+        <span class="tag firebase">Firebase</span>
+        <span class="tag aws">AWS</span>
+      </div>
+    </section>
 
-  <!-- Certifications -->
-  <section id="certifications">
-    <h2>Certifications</h2>
-    <ul>
-      <li>Apple Certified iOS Developer</li>
-      <li>AWS Certified Solutions Architect – Associate</li>
-      <li>Certified Scrum Master (CSM)</li>
-    </ul>
-  </section>
+    <!-- Projects Card (Wide) -->
+    <section class="card projects-card" id="projects">
+      <div class="card-header">
+        <h2>Recent Work</h2>
+        <a href="https://github.com/InfiniteEvolution" target="_blank" class="view-all">View All</a>
+      </div>
+      <div class="projects-grid">
+        <article class="project-item">
+          <div class="project-image">
+            <img src="images/canvas.png" alt="Canvas App">
+          </div>
+          <div class="project-info">
+            <h3>Canvas</h3>
+            <p>Privacy-First AI Companion. On-device processing, CoreML & Neuromorphic design.</p>
+            <div class="project-links">
+              <span class="tech-badge">SwiftUI</span>
+              <span class="tech-badge">CoreML</span>
+            </div>
+          </div>
+          <a href="https://github.com/InfiniteEvolution/Canvas" class="project-link-overlay"></a>
+        </article>
 
-  <!-- Skills -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul class="skill-list">
-      <li>Swift, Objective‑C</li>
-      <li>MVVM‑C, MVC, POP</li>
-      <li>Combine, SwiftUI, UIKit, Auto Layout</li>
-      <li>Core Bluetooth, Core Location, Core Data</li>
-      <li>Firebase, MQTT, REST APIs, AWS</li>
-      <li>Git, CocoaPods, Swift Package Manager</li>
-      <li>Agile, JIRA, Test‑Driven Development (XCTest)</li>
-    </ul>
-  </section>
+        <article class="project-item">
+          <div class="project-image">
+            <img src="images/swiftnetwork.png" alt="SwiftNetwork">
+          </div>
+          <div class="project-info">
+            <h3>SwiftNetwork</h3>
+            <p>Modern networking library. Async/await, Combine, Type-safe.</p>
+            <div class="project-links">
+              <span class="tech-badge">Swift</span>
+              <span class="tech-badge">Async/Await</span>
+            </div>
+          </div>
+          <a href="https://github.com/InfiniteEvolution/SwiftNetwork" class="project-link-overlay"></a>
+        </article>
+      </div>
+    </section>
 
-  <!-- Education -->
-  <section id="education">
-    <h2>Education</h2>
-    <p>B.C.A, Annamalai University (Aug 2012 – May 2015)</p>
-  </section>
+    <!-- Current Interests Card -->
+    <section class="card interests-card" id="interests">
+      <div class="card-header">
+        <h2>Focus Areas</h2>
+        <span class="icon">🎯</span>
+      </div>
+      <div class="interest-list">
+        <div class="interest-item">
+          <span class="interest-icon">🧠</span>
+          <div>
+            <strong>On-Device AI</strong>
+            <p>Privacy-first machine learning</p>
+          </div>
+        </div>
+        <div class="interest-item">
+          <span class="interest-icon">🔒</span>
+          <div>
+            <strong>Local Computing</strong>
+            <p>Bare-metal performance</p>
+          </div>
+        </div>
+        <div class="interest-item">
+          <span class="interest-icon">⚡</span>
+          <div>
+            <strong>Architecture</strong>
+            <p>Protocol-oriented design</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <!-- Contact -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>📞 (+91) 9544215814</p>
-    <p>📧 <a href="mailto:sijo.perumadan@gmail.com">sijo.perumadan@gmail.com</a></p>
-    <p>📍 Thrissur, Kerala, India</p>
-    <p>🔗 <a href="https://linkedin.com/in/sijopert" target="_blank">LinkedIn</a> | <a
-        href="https://github.com/sijopert" target="_blank">GitHub</a></p>
-  </section>
+    <!-- Certifications Card -->
+    <section class="card certifications-card">
+      <div class="card-header">
+        <h2>Certifications</h2>
+        <span class="icon">📜</span>
+      </div>
+      <ul class="cert-list">
+        <li>
+          <span class="check">✓</span>
+          Apple Certified iOS Developer
+        </li>
+        <li>
+          <span class="check">✓</span>
+          AWS Solutions Architect
+        </li>
+        <li>
+          <span class="check">✓</span>
+          Certified Scrum Master
+        </li>
+      </ul>
+    </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Sijo | Built with ❤️ using GitHub Pages</p>
+    <!-- Education Card -->
+    <section class="card education-card">
+      <div class="card-header">
+        <h2>Education</h2>
+        <span class="icon">🎓</span>
+      </div>
+      <div class="edu-content">
+        <strong>B.C.A</strong>
+        <span class="school">Annamalai University</span>
+        <span class="year">2012 - 2015</span>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 Sijo. Built with ❤️ for the web.</p>
   </footer>
+
 </body>
 
 </html>
