@@ -521,30 +521,51 @@ body {
   color: var(--text-secondary);
 }
 
-/* Certs & Edu (Compact) */
-.certifications-card,
+/* Contributions & Edu (Compact) */
+.contributions-card,
 .education-card {
   grid-column: span 1;
 }
 
-.cert-list {
+.contrib-list {
   list-style: none;
-  font-size: 0.85rem;
-  color: var(--text-secondary);
-}
-
-.cert-list li {
-  margin-bottom: 12px;
   display: flex;
-  align-items: center;
-  gap: 8px;
+  flex-direction: column;
+  gap: 12px;
 }
 
-.check {
-  color: #10b981;
-  /* Green */
-  font-weight: bold;
+.contrib-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 10px;
+  transition: var(--transition);
 }
+
+.contrib-list li:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.contrib-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.contrib-list strong {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.contrib-list p {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
 
 .edu-content {
   display: flex;
